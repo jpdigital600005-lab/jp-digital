@@ -4,881 +4,955 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JP Digital | Creative & Digital Solutions</title>
+    <title>JP Digital | Printing & Advertising</title>
 
-    <meta
-        name="description"
-        content="JP Digital - Creative Design, Printing, Photo Editing, Video Editing and Digital Solutions in Triplicane, Chennai."
-    >
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+    <!-- ==========================================
+         LOADING SCREEN
+    =========================================== -->
 
-<header class="header">
+    <div class="loader" id="loader">
 
-    <div class="container navbar">
+        <div class="loader-bg-jp">JP</div>
 
-        <a href="#home" class="brand">
+        <div class="loader-content">
 
-            <div class="brand-logo">
+            <div class="loader-logo">
+                <span>JP</span>
+                <strong>DIGITAL</strong>
+            </div>
+
+            <div class="loader-graphic">
+
+                <div class="graphic-circle circle-one"></div>
+                <div class="graphic-circle circle-two"></div>
+
+                <div class="printer-graphic">
+
+                    <div class="printer-top"></div>
+
+                    <div class="printer-body">
+
+                        <div class="printer-light"></div>
+
+                        <div class="printer-paper">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                    <div class="printer-bottom"></div>
+
+                </div>
+
+                <div class="floating-dot dot-one"></div>
+                <div class="floating-dot dot-two"></div>
+                <div class="floating-dot dot-three"></div>
+                <div class="floating-dot dot-four"></div>
+
+            </div>
+
+            <div class="loader-line">
+                <span id="loaderProgress"></span>
+            </div>
+
+            <div class="loader-info">
+                <span>PRINT • CREATE • IMPRESS</span>
+                <strong id="loaderPercent">0%</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         BACKGROUND JP
+    =========================================== -->
+
+    <div class="jp-background" aria-hidden="true">
+
+        <span>JP</span>
+        <span>JP</span>
+        <span>JP</span>
+        <span>JP</span>
+        <span>JP</span>
+        <span>JP</span>
+        <span>JP</span>
+        <span>JP</span>
+
+    </div>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <a href="#home" class="logo">
+                <span>JP</span>
+                <strong>DIGITAL</strong>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <a href="#contact" class="nav-btn">
+                Get a Quote
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         HERO
+    =========================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+
+        <div class="hero-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="container hero-content">
+
+            <div class="hero-text reveal">
+
+                <div class="mini-title">
+
+                    <span></span>
+
+                    PRINTING & ADVERTISING SOLUTIONS
+
+                </div>
+
+                <h1>
+
+                    WE PRINT.
+                    <br>
+
+                    <span>WE CREATE.</span>
+
+                    <br>
+
+                    YOU IMPRESS.
+
+                </h1>
+
+                <p>
+
+                    Premium printing, signage and branding solutions
+                    designed to make your business stand out.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#services" class="btn yellow-btn">
+                        Explore Services
+                    </a>
+
+                    <a href="#contact" class="btn outline-btn">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO GRAPHIC -->
+
+            <div class="hero-visual reveal">
+
+                <div class="hero-orbit orbit-one"></div>
+                <div class="hero-orbit orbit-two"></div>
+
+                <div class="hero-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="print-icon">
+                        ✦
+                    </div>
+
+                    <h3>JP</h3>
+
+                    <h4>DIGITAL</h4>
+
+                    <p>
+                        Creative Printing
+                        <br>
+                        & Signage Solutions
+                    </p>
+
+                    <div class="card-line"></div>
+
+                </div>
+
+                <div class="floating-shape shape-one"></div>
+                <div class="floating-shape shape-two"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="scroll-down">
+
+            <span>SCROLL</span>
+
+            <div></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         ABOUT
+    =========================================== -->
+
+    <section class="about section" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-visual reveal">
+
+                <div class="visual-grid"></div>
+
+                <div class="big-jp">
+                    JP
+                </div>
+
+                <div class="about-circle"></div>
+
+                <div class="experience-card">
+
+                    <strong>JP</strong>
+
+                    <span>Digital</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content reveal">
+
+                <div class="section-label">
+                    ABOUT JP DIGITAL
+                </div>
+
+                <h2>
+
+                    Turning your ideas into
+                    <span>visual impact.</span>
+
+                </h2>
+
+                <p>
+
+                    From eye-catching banners to premium signage,
+                    JP Digital provides complete printing and
+                    advertising solutions for businesses, events
+                    and brands.
+
+                </p>
+
+                <p>
+
+                    We combine creative design, quality printing
+                    and professional finishing to deliver work
+                    that gets noticed.
+
+                </p>
+
+                <a href="#contact" class="text-btn">
+                    Let's Work Together →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SERVICES
+    =========================================== -->
+
+    <section class="services section" id="services">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    WHAT WE DO
+                </div>
+
+                <h2>
+                    Our <span>Services</span>
+                </h2>
+
+                <p>
+                    Complete printing and branding solutions
+                    under one roof.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">01</div>
+
+                    <div class="service-icon">🖨️</div>
+
+                    <h3>Digital Printing</h3>
+
+                    <p>
+                        High-quality digital printing for
+                        all your business needs.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">02</div>
+
+                    <div class="service-icon">🪧</div>
+
+                    <h3>Flex Printing</h3>
+
+                    <p>
+                        Creative and durable flex banners
+                        in custom sizes.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">03</div>
+
+                    <div class="service-icon">💡</div>
+
+                    <h3>LED Boards</h3>
+
+                    <p>
+                        Bright and attractive LED boards
+                        for maximum visibility.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">04</div>
+
+                    <div class="service-icon">✨</div>
+
+                    <h3>Backlit Boards</h3>
+
+                    <p>
+                        Premium illuminated boards for
+                        modern branding.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">05</div>
+
+                    <div class="service-icon">🚗</div>
+
+                    <h3>Vehicle Advertising</h3>
+
+                    <p>
+                        Turn your vehicles into powerful
+                        moving advertisements.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">06</div>
+
+                    <div class="service-icon">🎨</div>
+
+                    <h3>Vinyl Printing</h3>
+
+                    <p>
+                        Professional vinyl graphics for
+                        indoor and outdoor use.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">07</div>
+
+                    <div class="service-icon">🏢</div>
+
+                    <h3>ACP Cladding</h3>
+
+                    <p>
+                        Modern ACP elevation and branding
+                        solutions.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">08</div>
+
+                    <div class="service-icon">📋</div>
+
+                    <h3>Posters & Cards</h3>
+
+                    <p>
+                        Professional posters, visiting cards
+                        and promotional prints.
+                    </p>
+
+                    <div class="card-arrow">→</div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         PROCESS
+    =========================================== -->
+
+    <section class="process section">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    OUR PROCESS
+                </div>
+
+                <h2>
+                    From Idea to <span>Impact</span>
+                </h2>
+
+            </div>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-item reveal">
+
+                    <div class="process-icon">
+                        01
+                    </div>
+
+                    <h3>Design</h3>
+
+                    <p>
+                        We understand your idea and create
+                        the design.
+                    </p>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-item reveal">
+
+                    <div class="process-icon">
+                        02
+                    </div>
+
+                    <h3>Print</h3>
+
+                    <p>
+                        Your design is printed with quality
+                        materials.
+                    </p>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-item reveal">
+
+                    <div class="process-icon">
+                        03
+                    </div>
+
+                    <h3>Finish</h3>
+
+                    <p>
+                        Professional finishing makes your
+                        product stand out.
+                    </p>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-item reveal">
+
+                    <div class="process-icon">
+                        04
+                    </div>
+
+                    <h3>Deliver</h3>
+
+                    <p>
+                        We deliver your finished project
+                        ready to impress.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         STATS
+    =========================================== -->
+
+    <section class="stats section">
+
+        <div class="container stats-grid">
+
+
+            <div class="stat reveal">
+
+                <h3>
+                    <span class="counter" data-target="1000">
+                        0
+                    </span>+
+                </h3>
+
+                <p>Projects</p>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <h3>
+                    <span class="counter" data-target="24">
+                        0
+                    </span>/7
+                </h3>
+
+                <p>Service</p>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <h3>
+                    <span class="counter" data-target="100">
+                        0
+                    </span>%
+                </h3>
+
+                <p>Commitment</p>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <h3>
+                    <span class="counter" data-target="10">
+                        0
+                    </span>+
+                </h3>
+
+                <p>Services</p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         GALLERY
+    =========================================== -->
+
+    <section class="gallery section" id="gallery">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    OUR WORK
+                </div>
+
+                <h2>
+                    Creative <span>Gallery</span>
+                </h2>
+
+                <p>
+                    Replace these demo boxes with your
+                    actual JP Digital works.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <span>YOUR WORK</span>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <span>YOUR WORK</span>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <span>YOUR WORK</span>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <span>YOUR WORK</span>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <span>YOUR WORK</span>
+                    </div>
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <span>YOUR WORK</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CTA
+    =========================================== -->
+
+    <section class="cta section">
+
+        <div class="container cta-box reveal">
+
+            <div class="cta-jp">
                 JP
             </div>
 
-            <div class="brand-content">
-                <strong>JP Digital</strong>
-                <span>Creative & Digital Solutions</span>
-            </div>
+            <div class="cta-light"></div>
 
-        </a>
+            <div class="cta-content">
 
-
-        <nav class="nav-menu">
-
-            <a href="#home" class="active">Home</a>
-            <a href="#services">Services</a>
-            <a href="#work">Our Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-
-        <a
-            href="https://wa.me/919884102642?text=Hi%2C%20I%27m%20interested%20to%20know%20more%20about%20JP%20Digital."
-            target="_blank"
-            class="nav-button"
-        >
-            WhatsApp ↗
-        </a>
-
-
-        <button class="menu-button" aria-label="Open Menu">
-            ☰
-        </button>
-
-    </div>
-
-</header>
-
-
-<!-- ================= HERO ================= -->
-
-<main>
-
-<section class="hero" id="home">
-
-    <div class="hero-glow"></div>
-
-    <div class="container hero-grid">
-
-
-        <div class="hero-content reveal">
-
-            <div class="eyebrow">
-                <span></span>
-                JP DIGITAL / CHENNAI
-            </div>
-
-
-            <h1>
-                WE TURN
-                <br>
-                IDEAS INTO
-                <br>
-                <span>IMPACT.</span>
-            </h1>
-
-
-            <p>
-                Creative design, professional printing and digital
-                solutions for businesses, brands, events and personal
-                requirements.
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="#services" class="button button-primary">
-                    Explore Services
-                    <span>→</span>
-                </a>
-
-
-                <a
-                    href="https://wa.me/919884102642?text=Hi%2C%20I%27m%20interested%20to%20know%20more%20about%20JP%20Digital."
-                    target="_blank"
-                    class="button button-outline"
-                >
-                    Chat on WhatsApp
-                </a>
-
-            </div>
-
-
-            <div class="hero-stats">
-
-                <div>
-                    <strong>01</strong>
-                    <span>Creative</span>
+                <div class="section-label">
+                    READY TO CREATE?
                 </div>
-
-                <div>
-                    <strong>02</strong>
-                    <span>Quality</span>
-                </div>
-
-                <div>
-                    <strong>03</strong>
-                    <span>Precision</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- HERO VISUAL -->
-
-        <div class="hero-visual reveal">
-
-            <div class="visual-ring ring-one"></div>
-            <div class="visual-ring ring-two"></div>
-
-
-            <div class="floating-card floating-left">
-
-                <span class="floating-icon">✦</span>
-
-                <div>
-                    <strong>Creative Design</strong>
-                    <small>Ideas into visuals</small>
-                </div>
-
-            </div>
-
-
-            <div class="main-visual-card">
-
-                <div class="visual-header">
-
-                    <span>JP DIGITAL</span>
-
-                    <span>CREATIVE STUDIO</span>
-
-                </div>
-
-
-                <div class="visual-center">
-
-                    <div class="jp-symbol">
-                        JP
-                    </div>
-
-                    <div>
-
-                        <span>CREATIVE & DIGITAL</span>
-
-                        <h3>
-                            Make it memorable.
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <div class="visual-footer">
-
-                    <span>DESIGN</span>
-                    <span>PRINT</span>
-                    <span>DIGITAL</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="floating-card floating-right">
-
-                <span class="floating-icon">▣</span>
-
-                <div>
-                    <strong>Professional Print</strong>
-                    <small>Quality output</small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="container hero-bottom">
-
-        <span>CREATIVE</span>
-        <span>DESIGN</span>
-        <span>PRINT</span>
-        <span>DIGITAL</span>
-        <span>CHENNAI</span>
-
-    </div>
-
-</section>
-
-
-<!-- ================= MARQUEE ================= -->
-
-<section class="marquee-section">
-
-    <div class="marquee-track">
-
-        <span>DESIGN</span>
-        <b>✦</b>
-        <span>PRINT</span>
-        <b>✦</b>
-        <span>CREATE</span>
-        <b>✦</b>
-        <span>BRAND</span>
-        <b>✦</b>
-        <span>DIGITAL</span>
-
-        <span>DESIGN</span>
-        <b>✦</b>
-        <span>PRINT</span>
-        <b>✦</b>
-        <span>CREATE</span>
-        <b>✦</b>
-        <span>BRAND</span>
-        <b>✦</b>
-        <span>DIGITAL</span>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section class="services section" id="services">
-
-    <div class="container">
-
-
-        <div class="section-heading reveal">
-
-            <div>
-
-                <span class="section-label">
-                    WHAT WE DO
-                </span>
 
                 <h2>
-                    CREATIVE WORK.
-                    <br>
-                    <span>DONE RIGHT.</span>
+                    LET'S BUILD YOUR
+                    <span>BRAND.</span>
                 </h2>
 
-            </div>
-
-
-            <p>
-                From a simple idea to a complete professional
-                creative, JP Digital helps you bring your vision
-                to life.
-            </p>
-
-        </div>
-
-
-        <div class="service-grid">
-
-
-            <article class="service-card reveal">
-
-                <span class="service-number">01</span>
-
-                <div class="service-icon">
-                    ✦
-                </div>
-
-                <h3>
-                    Graphic Design
-                </h3>
-
                 <p>
-                    Posters, advertisements, social media
-                    creatives, business designs and promotional
-                    graphics.
+                    Tell us what you need. We'll turn your
+                    idea into something people notice.
                 </p>
 
-                <a href="#contact">
-                    Start a Project →
-                </a>
-
-            </article>
-
-
-            <article class="service-card reveal">
-
-                <span class="service-number">02</span>
-
-                <div class="service-icon">
-                    ▣
-                </div>
-
-                <h3>
-                    Flex & Banner
-                </h3>
-
-                <p>
-                    Professional flex, banner and promotional
-                    printing for shops, businesses, events
-                    and functions.
-                </p>
-
-                <a href="#contact">
+                <a href="#contact" class="btn yellow-btn">
                     Get a Quote →
                 </a>
 
-            </article>
-
-
-            <article class="service-card reveal">
-
-                <span class="service-number">03</span>
-
-                <div class="service-icon">
-                    ◈
-                </div>
-
-                <h3>
-                    Photo Editing
-                </h3>
-
-                <p>
-                    Creative photo editing, retouching,
-                    enhancement and professional visual
-                    presentation.
-                </p>
-
-                <a href="#contact">
-                    Enquire Now →
-                </a>
-
-            </article>
-
-
-            <article class="service-card reveal">
-
-                <span class="service-number">04</span>
-
-                <div class="service-icon">
-                    ▶
-                </div>
-
-                <h3>
-                    Video Editing
-                </h3>
-
-                <p>
-                    Creative video editing for social media,
-                    promotional content, events and digital
-                    campaigns.
-                </p>
-
-                <a href="#contact">
-                    Discuss Project →
-                </a>
-
-            </article>
-
-
-            <article class="service-card reveal">
-
-                <span class="service-number">05</span>
-
-                <div class="service-icon">
-                    ▤
-                </div>
-
-                <h3>
-                    Digital Printing
-                </h3>
-
-                <p>
-                    Sharp, clean and professional digital
-                    printing for business and personal
-                    requirements.
-                </p>
-
-                <a href="#contact">
-                    Know More →
-                </a>
-
-            </article>
-
-
-            <article class="service-card reveal">
-
-                <span class="service-number">06</span>
-
-                <div class="service-icon">
-                    ✎
-                </div>
-
-                <h3>
-                    Custom Creative Works
-                </h3>
-
-                <p>
-                    Have a unique requirement? Tell us your
-                    idea and we'll create a solution around it.
-                </p>
-
-                <a href="#contact">
-                    Let's Create →
-                </a>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="about section" id="about">
-
-    <div class="container about-grid">
-
-
-        <div class="about-visual reveal">
-
-            <div class="about-circle"></div>
-
-            <strong>JP</strong>
-
-            <span>
-                CREATIVE
-                <br>
-                DIGITAL
-                <br>
-                SOLUTIONS
-            </span>
-
-        </div>
-
-
-        <div class="about-content reveal">
-
-            <span class="section-label">
-                ABOUT JP DIGITAL
-            </span>
-
-            <h2>
-                BUILT FOR
-                <br>
-                <span>CREATIVE PEOPLE.</span>
-            </h2>
-
-            <p>
-                JP Digital is a creative and digital service
-                destination in Triplicane, Chennai. We help
-                businesses, brands, events and individuals
-                turn their ideas into professional visuals
-                and finished digital work.
-            </p>
-
-
-            <div class="about-points">
-
-                <div>
-                    <span>✓</span>
-                    Professional Approach
-                </div>
-
-                <div>
-                    <span>✓</span>
-                    Creative Thinking
-                </div>
-
-                <div>
-                    <span>✓</span>
-                    Quality Output
-                </div>
-
-                <div>
-                    <span>✓</span>
-                    Customer Focused
-                </div>
-
             </div>
 
-
-            <a href="#contact" class="button button-primary">
-                Talk to JP Digital →
-            </a>
-
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- ================= OUR WORK ================= -->
+    <!-- ==========================================
+         CONTACT
+    =========================================== -->
 
-<section class="work section" id="work">
+    <section class="contact section" id="contact">
 
-    <div class="container">
+        <div class="container contact-grid">
 
 
-        <div class="section-heading reveal">
+            <div class="contact-content reveal">
 
-            <div>
-
-                <span class="section-label">
-                    OUR WORK
-                </span>
+                <div class="section-label">
+                    CONTACT JP DIGITAL
+                </div>
 
                 <h2>
-                    IDEAS THAT
-                    <br>
-                    <span>STAND OUT.</span>
-                </h2>
-
-            </div>
-
-
-            <p>
-                Every project starts with an idea.
-                We turn that idea into something
-                people notice.
-            </p>
-
-        </div>
-
-
-        <div class="work-grid">
-
-
-            <div class="work-main reveal">
-
-                <div class="work-overlay">
-
-                    <span>
-                        CREATIVE DESIGN
-                    </span>
-
-                    <h3>
-                        Make your brand
-                        <br>
-                        impossible to ignore.
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <div class="work-side">
-
-
-                <div class="work-box reveal">
-
-                    <div>
-
-                        <span>
-                            PRINT
-                        </span>
-
-                        <h3>
-                            BIG IDEAS.
-                            <br>
-                            BIG PRINT.
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <div class="work-box second reveal">
-
-                    <div>
-
-                        <span>
-                            DIGITAL
-                        </span>
-
-                        <h3>
-                            CREATE.
-                            <br>
-                            SHARE. GROW.
-                        </h3>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section class="cta">
-
-    <div class="container">
-
-        <div class="cta-box reveal">
-
-            <div>
-
-                <span class="section-label">
-                    HAVE AN IDEA?
-                </span>
-
-                <h2>
-                    LET'S CREATE
-                    <br>
-                    SOMETHING GREAT.
+                    Let's make something
+                    <span>awesome.</span>
                 </h2>
 
                 <p>
-                    Tell us what you need.
-                    We'll take it from there.
+                    Have a project in mind? Contact us today
+                    and let's discuss your requirements.
                 </p>
 
-            </div>
+
+                <div class="contact-info">
 
 
-            <a
-                href="https://wa.me/919884102642?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20JP%20Digital."
-                target="_blank"
-                class="button button-primary"
-            >
-                Start a Project ↗
-            </a>
+                    <div class="contact-row">
 
-        </div>
+                        <div>📍</div>
 
-    </div>
+                        <div>
 
-</section>
+                            <small>LOCATION</small>
 
+                            <strong>
+                                Triplicane, Chennai
+                            </strong>
 
-<!-- ================= CONTACT ================= -->
+                        </div>
 
-<section class="contact section" id="contact">
-
-    <div class="container contact-grid">
+                    </div>
 
 
-        <div class="contact-left reveal">
+                    <div class="contact-row">
 
-            <span class="section-label">
-                CONTACT JP DIGITAL
-            </span>
+                        <div>📞</div>
 
-            <h2>
-                ONE MESSAGE
-                <br>
-                <span>AWAY.</span>
-            </h2>
+                        <div>
 
-            <p>
-                Have a design requirement, printing work,
-                editing project or a custom creative idea?
-                Contact JP Digital directly.
-            </p>
+                            <small>CALL US</small>
+
+                            <strong>
+                                +91  98841 02642
+                            </strong>
+
+                        </div>
+
+                    </div>
 
 
-            <div class="contact-info">
+                </div>
 
 
-                <div class="contact-row">
+                <!-- SOCIAL LINKS -->
 
-                    <span>
-                        PHONE
-                    </span>
+                <div class="social-links">
 
-                    <a href="tel:+919884102642">
-                        +91 98841 02642
+                    <a href="https://wa.me/919884102642?text=Hi+%F0%9F%91%8B%F0%9F%8F%BB+JP+Digital%2C+I+would+like+to+discuss+a+project+with+you.+%F0%9F%98%8A&utm_source=chatgpt.com" class="social-icon">
+                        <span>W</span>
+                        WhatsApp
+                    </a>
+
+                    <a href="https://www.instagram.com/_jp_digital_?igsi=MWsxNHF5OXh3dmM2eQ==" class="social-icon">
+                        <span>◎</span>
+                        Instagram
+                    </a>
+
+                    <a href="https://youtube.com/@jpdigitaltriplicane?si=DPj7QR-N8WvVaQpl" class="social-icon">
+                        <span>▶</span>
+                        YouTube
                     </a>
 
                 </div>
 
 
-                <div class="contact-row">
-
-                    <span>
-                        LOCATION
-                    </span>
-
-                    <strong>
-                        Triplicane, Chennai
-                    </strong>
-
-                </div>
+            </div>
 
 
-                <div class="contact-row">
+            <form class="contact-form reveal" id="contactForm">
 
-                    <span>
-                        WHATSAPP
-                    </span>
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
 
-                    <strong>
-                        Available for enquiries
-                    </strong>
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    required
+                >
 
-                </div>
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                >
+
+                <textarea
+                    placeholder="Tell us about your requirement..."
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="btn yellow-btn"
+                >
+                    Send Enquiry →
+                </button>
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="logo">
+
+                <span>JP</span>
+
+                <strong>DIGITAL</strong>
+
+            </div>
+
+            <p>
+                © 2026 JP Digital. All Rights Reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
 
             </div>
 
         </div>
 
-
-        <div class="contact-card reveal">
-
-            <span class="section-label">
-                JP DIGITAL
-            </span>
-
-            <h3>
-                Let's talk about
-                <br>
-                your project.
-            </h3>
-
-            <p>
-                Send us a WhatsApp message and tell us
-                what you need. We'll get back to you.
-            </p>
+    </footer>
 
 
-            <a
-                href="https://wa.me/919884102642?text=Hi%2C%20I%27m%20interested%20to%20know%20more%20about%20JP%20Digital."
-                target="_blank"
-                class="whatsapp-button"
-            >
-                Message on WhatsApp →
-            </a>
+    <!-- FLOATING WHATSAPP -->
+
+    <a href="https://wa.me/919884102642?text=Hi+%F0%9F%91%8B%F0%9F%8F%BB+JP+Digital%2C+I+would+like+to+discuss+a+project+with+you.+%F0%9F%98%8A&utm_source=chatgpt.com" class="whatsapp" id="whatsappBtn">
+
+        <span>W</span>
+
+    </a>
 
 
-            <a
-                href="tel:+919884102642"
-                class="call-button"
-            >
-                Call +91 98841 02642
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="container footer-grid">
-
-
-        <div>
-
-            <a href="#home" class="footer-brand">
-                JP DIGITAL
-            </a>
-
-            <p>
-                Creative & Digital Solutions
-                <br>
-                Triplicane, Chennai
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <span class="footer-title">
-                EXPLORE
-            </span>
-
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#work">Our Work</a>
-            <a href="#about">About</a>
-
-        </div>
-
-
-        <div>
-
-            <span class="footer-title">
-                CONTACT
-            </span>
-
-            <a href="tel:+919884102642">
-                +91 98841 02642
-            </a>
-
-            <a
-                href="https://wa.me/919884102642"
-                target="_blank"
-            >
-                WhatsApp
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-        <span>
-            © <span id="year"></span>
-            JP Digital. All Rights Reserved.
-        </span>
-
-        <span>
-            CREATIVE • DIGITAL • PRINT
-        </span>
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
