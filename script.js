@@ -1,204 +1,338 @@
-/* =========================================
-   JP DIGITAL
-   Main JavaScript
-========================================= */
+/* =================================================
+   PAGE LOADING
+================================================= */
+
+document.body.classList.add("loading");
+
+const loader = document.getElementById("loader");
+const progress = document.getElementById("loaderProgress");
+const percent = document.getElementById("loaderPercent");
+
+let loadingValue = 0;
+
+const loadingInterval = setInterval(() => {
+
+    loadingValue += Math.floor(Math.random() * 5) + 1;
+
+    if (loadingValue >= 100) {
+
+        loadingValue = 100;
+
+        clearInterval(loadingInterval);
+
+        setTimeout(() => {
+
+            loader.classList.add("hide");
+            document.body.classList.remove("loading");
+
+        }, 500);
+
+    }
+
+    progress.style.width = `${loadingValue}%`;
+    percent.textContent = `${loadingValue}%`;
+
+}, 55);
 
 
-/* ================= YEAR ================= */
+/* =================================================
+   MOBILE MENU
+================================================= */
 
-const yearElement = document.getElementById("year");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.querySelector(".nav-links");
 
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}
+menuBtn.addEventListener("click", () => {
 
+    navLinks.classList.toggle("mobile-active");
 
-/* ================= MOBILE MENU ================= */
-
-const menuButton = document.querySelector(".menu-button");
-const navMenu = document.querySelector(".nav-menu");
-
-if (menuButton && navMenu) {
-
-    menuButton.addEventListener("click", () => {
-
-        navMenu.classList.toggle("mobile-active");
-
-        if (navMenu.classList.contains("mobile-active")) {
-
-            navMenu.style.display = "flex";
-            navMenu.style.position = "absolute";
-            navMenu.style.top = "82px";
-            navMenu.style.left = "4%";
-            navMenu.style.right = "4%";
-            navMenu.style.padding = "25px";
-            navMenu.style.flexDirection = "column";
-            navMenu.style.background = "#111";
-            navMenu.style.border = "1px solid rgba(255,255,255,.1)";
-            navMenu.style.borderRadius = "15px";
-
-        } else {
-
-            navMenu.removeAttribute("style");
-
-        }
-
-    });
-
-}
+});
 
 
-/* ================= CLOSE MOBILE MENU ================= */
+/* =================================================
+   CLOSE MOBILE MENU
+================================================= */
 
-document.querySelectorAll(".nav-menu a").forEach(link => {
+document.querySelectorAll(".nav-links a").forEach((link) => {
 
     link.addEventListener("click", () => {
 
-        if (window.innerWidth <= 950) {
-
-            navMenu.classList.remove("mobile-active");
-            navMenu.removeAttribute("style");
-
-        }
+        navLinks.classList.remove("mobile-active");
 
     });
 
 });
 
 
-/* ================= SCROLL REVEAL ================= */
+/* =================================================
+   SCROLL REVEAL
+================================================= */
 
-const revealElements =
-    document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(".reveal");
 
+const revealObserver = new IntersectionObserver(
 
-const revealObserver =
-    new IntersectionObserver(
-        (entries, observer) => {
+    (entries) => {
 
-            entries.forEach(entry => {
+        entries.forEach((entry) => {
 
-                if (entry.isIntersecting) {
+            if (entry.isIntersecting) {
 
-                    entry.target.classList.add("show");
+                entry.target.classList.add("active");
 
-                    observer.unobserve(entry.target);
+                revealObserver.unobserve(entry.target);
 
-                }
+            }
 
-            });
+        });
 
-        },
-        {
-            threshold: 0.12
-        }
-    );
+    },
 
+    {
+        threshold: 0.12
+    }
 
-revealElements.forEach(element => {
+);
+
+revealElements.forEach((element) => {
 
     revealObserver.observe(element);
 
 });
 
 
-/* ================= ACTIVE NAVIGATION ================= */
+/* =================================================
+   COUNTER ANIMATION
+================================================= */
 
-const sections =
-    document.querySelectorAll("section[id]");
+const counters = document.querySelectorAll(".counter");
 
-const navLinks =
-    document.querySelectorAll(".nav-menu a");
+const counterObserver = new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+
+            const target =
+                Number(counter.dataset.target);
+
+            const duration = 1800;
+
+            const startTime =
+                performance.now();
 
 
-window.addEventListener(
-    "scroll",
-    () => {
+            function updateCounter(currentTime) {
 
-        let currentSection = "";
+                const progress =
+                    Math.min(
+                        (currentTime - startTime) / duration,
+                        1
+                    );
 
-        sections.forEach(section => {
+                const current =
+                    Math.floor(progress * target);
 
-            const sectionTop =
-                section.offsetTop - 180;
+                counter.textContent = current;
 
-            if (window.scrollY >= sectionTop) {
+                if (progress < 1) {
 
-                currentSection =
-                    section.getAttribute("id");
+                    requestAnimationFrame(updateCounter);
+
+                } else {
+
+                    counter.textContent = target;
+
+                }
 
             }
 
-        });
 
+            requestAnimationFrame(updateCounter);
 
-        navLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                `#${currentSection}`
-            ) {
-
-                link.classList.add("active");
-
-            }
+            counterObserver.unobserve(counter);
 
         });
 
     },
+
     {
-        passive: true
+        threshold: 0.5
     }
+
 );
 
 
-/* ================= NAVBAR SHADOW ================= */
+counters.forEach((counter) => {
 
-const header =
-    document.querySelector(".header");
+    counterObserver.observe(counter);
 
-
-window.addEventListener(
-    "scroll",
-    () => {
-
-        if (window.scrollY > 50) {
-
-            header.style.background =
-                "rgba(7,7,7,.92)";
-
-        } else {
-
-            header.style.background =
-                "rgba(7,7,7,.78)";
-
-        }
-
-    },
-    {
-        passive: true
-    }
-);
+});
 
 
-/* ================= ESC KEY ================= */
+/* =================================================
+   CONTACT FORM → WHATSAPP
+================================================= */
 
-document.addEventListener(
-    "keydown",
-    (event) => {
+const contactForm =
+    document.getElementById("contactForm");
 
-        if (event.key === "Escape") {
 
-            if (navMenu) {
+contactForm.addEventListener("submit", (event) => {
 
-                navMenu.classList.remove("mobile-active");
-                navMenu.removeAttribute("style");
+    event.preventDefault();
+
+
+    const name =
+        contactForm.querySelector(
+            'input[type="text"]'
+        ).value.trim();
+
+
+    const phone =
+        contactForm.querySelector(
+            'input[type="tel"]'
+        ).value.trim();
+
+
+    const email =
+        contactForm.querySelector(
+            'input[type="email"]'
+        ).value.trim();
+
+
+    const requirement =
+        contactForm.querySelector(
+            "textarea"
+        ).value.trim();
+
+
+    /*
+       JP DIGITAL WHATSAPP NUMBER
+    */
+
+    const whatsappNumber =
+        "919884102642";
+
+
+    const whatsappMessage =
+`Hello JP Digital 👋
+
+📩 NEW ENQUIRY
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+📧 Email: ${email}
+
+📝 Requirement:
+${requirement}
+
+Thank you.`;
+
+
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+
+/* =================================================
+   FLOATING WHATSAPP
+================================================= */
+
+const whatsappBtn =
+    document.getElementById("whatsappBtn");
+
+
+whatsappBtn.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+
+    const whatsappNumber =
+        "919884102642";
+
+
+    const message =
+        "Hello JP Digital 👋, I would like to know more about your services.";
+
+
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+
+/* =================================================
+   SOCIAL LINKS
+================================================= */
+
+const instagramURL =
+    "https://www.instagram.com/_jp_digital_/?igsh=MWsxNHF5OXh3dmM2eQ==";
+
+
+const youtubeURL =
+    "https://youtube.com/@jpdigitaltriplicane?si=DPj7QR-N8WvVaQpl";
+
+
+const whatsappURL =
+    "https://wa.me/919884102642";
+
+
+document.querySelectorAll(".social-icon").forEach(
+    (button, index) => {
+
+        button.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+
+            if (index === 0) {
+
+                window.open(
+                    whatsappURL,
+                    "_blank"
+                );
 
             }
 
-        }
+
+            if (index === 1) {
+
+                window.open(
+                    instagramURL,
+                    "_blank"
+                );
+
+            }
+
+
+            if (index === 2) {
+
+                window.open(
+                    youtubeURL,
+                    "_blank"
+                );
+
+            }
+
+        });
 
     }
 );
